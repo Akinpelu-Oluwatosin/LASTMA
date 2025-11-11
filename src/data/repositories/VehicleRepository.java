@@ -5,6 +5,7 @@ import data.models.Vehicle;
 import java.util.ArrayList;
 
 public interface VehicleRepository {
+
     Vehicle save(Vehicle vehicle);
 
     Vehicle findById(int id);

@@ -1,70 +1,36 @@
-package data.models;
-
-import java.time.LocalDateTime;
+package data.models.Tickets;
 
 public class Ticket {
-    private int userId;
-    private Vehicle vehicle;
-    private String offense;
-    private boolean hasPaid;
-    private Officer issuer;
-    private LocalDateTime dateOfBooking =  LocalDateTime.now();
-    private LocalDateTime dateOfPayment =  LocalDateTime.now();
+    private int id;
+    private String event;
+    private double price;
 
-
-    public int getUserId() {
-        return userId;
+    public Ticket(String event, double price) {
+        this.event = event;
+        this.price = price;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public int getId() {
+        return id;
     }
 
-    public Vehicle getVehicle() {
-        return vehicle;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setVehicle(Vehicle vehicle) {
-        this.vehicle = vehicle;
+    public String getEvent() {
+        return event;
     }
 
-    public String getOffense() {
-        return offense;
+    public void setEvent(String event) {
+        this.event = event;
     }
 
-    public void setOffense(String offense) {
-        this.offense = offense;
+    public double getPrice() {
+        return price;
     }
 
-    public boolean isHasPaid() {
-        return hasPaid;
-    }
-
-    public void setHasPaid(boolean hasPaid) {
-        this.hasPaid = hasPaid;
-    }
-
-    public Officer getIssuer() {
-        return issuer;
-    }
-
-    public void setIssuer(Officer issuer) {
-        this.issuer = issuer;
-    }
-
-    public LocalDateTime getDateOfBooking() {
-        return dateOfBooking;
-    }
-
-    public void setDateOfBooking(LocalDateTime dateOfBooking) {
-        this.dateOfBooking = dateOfBooking;
-    }
-
-    public LocalDateTime getDateOfPayment() {
-        return dateOfPayment;
-    }
-
-    public void setDateOfPayment(LocalDateTime dateOfPayment) {
-        this.dateOfPayment = dateOfPayment;
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
