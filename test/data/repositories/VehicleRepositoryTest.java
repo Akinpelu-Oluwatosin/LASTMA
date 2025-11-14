@@ -42,7 +42,7 @@ public class VehicleRepositoryTest {
     void testFindAll_emptyRepository() {
         ArrayList<Vehicle> allVehicles = repository.findAll();
         assertNotNull(allVehicles);
-        assertEquals(0, allVehicles.size()); // repository is empty
+        assertEquals(0, allVehicles.size());
     }
 
     @Test

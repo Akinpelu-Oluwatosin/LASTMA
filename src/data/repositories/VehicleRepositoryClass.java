@@ -1,5 +1,4 @@
 package data.repositories;
-
 import data.models.Vehicle;
 import java.util.ArrayList;
 
@@ -15,9 +14,9 @@ public class VehicleRepositoryClass implements VehicleRepository {
             vehicles.add(vehicle);
         } else {
 
-            for (Vehicle solara : vehicles) {
-                if (solara.getId() == vehicle.getId()) {
-                    vehicles.remove(solara);
+            for (Vehicle vehicleInRepository : vehicles) {
+                if (vehicleInRepository.getId() == vehicle.getId()) {
+                    vehicles.remove(vehicleInRepository);
                     vehicles.add(vehicle);
                     break;
                 }
